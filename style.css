@@ -1,0 +1,383 @@
+*{box-sizing: border-box}
+
+
+
+body{
+  margin: 0; padding: 0;
+  --bg-color: #e0e0e0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+}
+
+header{
+  width: 100%;
+}
+
+/* navbar deseign */
+
+nav{
+  width: 100%;
+  background: var(--bg-color);
+ 
+}
+
+nav  ul {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+nav li{
+  display: inline-block;
+  transition: all .3s;
+
+}
+
+nav a{
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+/* Logo design */
+
+.logo{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    color: #555;
+    padding-right: 20px;
+}
+
+
+
+/* Mega menu design */
+
+
+.mega-menu{
+  width: 100%;
+  background: var(--bg-color);
+
+  position: absolute;
+  left: 0;
+  transition: all .3s;
+  transform: scale(1,0);
+  transform-origin: top;
+  z-index: 99;
+}
+
+.mega-menu  ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.mega-menu  h3{
+  color:#222;
+  padding-left: 10px ;
+}
+
+.mega-menu li{
+  display: block;
+  padding: 5px 0 5px 30px;
+
+}
+
+.mega-menu a{
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: 0;
+}
+
+.sub-menu{
+  width: 33%;
+  float: left;
+}
+
+.mega-menu a:hover{
+  text-decoration: underline;
+}
+
+
+/* Hover effects */
+
+nav li:hover{
+  background: #f1f1f1;
+
+}
+
+nav li:hover .mega-menu{
+  transform: scale(1,1);
+  border-top: 1px solid #333;
+}
+
+nav li:hover .mega-menu li{
+  background: var(--bg-color);
+}
+
+
+ /* Banner design */
+
+ .banner{
+    width: 100%;
+    height: 510px;
+    background-image: url("desk.jpg");
+    background-size: cover;
+    position: relative;
+
+}
+
+
+.banner-text{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.79) 0%, rgba(0,0,0,0.72) 50%, rgba(5,5,5,0.72) 51%, rgba(240,237,240,0) 100%);
+    color: #e0e0e0;
+    
+}
+
+.banner-text h1{
+    margin-top: 120px;
+    margin-left: 100px;
+}
+
+.banner-text p{
+    width: 500px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.banner-btn{
+    background: #e0e0e0;
+    border: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 3px;
+    transition: all .3s;
+    margin: 20px 0 0 150px;
+}
+
+.banner-btn:hover{
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+
+/* Content design */
+
+.boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5px;
+}
+
+.box{
+    width: 22%;
+    padding: 10px 10px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.514);
+    transition: all .3s;
+}
+
+.box h2{
+    border-bottom: 1px solid rgba(153, 153, 153, 0.377);
+    padding-bottom: 20px;
+}
+
+.content-header{
+    text-align: center;
+    margin: 60px 0 15px 0;
+}
+
+.box:hover{
+    cursor: pointer;
+}
+
+
+/* recent work design */
+
+.recent-work{
+    width: 100%;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: space-between;
+    grid-gap: 7px;
+    margin-top: 30px;
+}
+
+.work-1, .work-2, .work-3, .work-4, .work-5, .work-6, .work-7 {
+    position: relative;
+    box-shadow: 0 0 10px rgba(61, 60, 60, 0.47);
+    cursor: pointer;
+}
+
+.work-1{
+    background: #fcfcfc;
+    grid-column: span 1;
+    grid-row: span 2;
+    padding: 20px;
+    color: #555;
+}
+
+.work-2{
+    background: url("work-2.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.work-3{
+    background: url("work-3.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.work-4{
+    background: url("work-4.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.work-5{
+    background: url("work-5.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.work-6{
+    background: url("work-6.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.work-7{
+    background: url("work-1.jpg");
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Overlay effect */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #e0e0e0;
+    font-size: 80px;
+    display: flex;
+  }
+
+   .ov-effect:hover .overlay{
+      height: 100%;
+      opacity: 0.8;
+      
+  }
+
+  .overlay i{
+    margin: auto;
+  }
+
+
+/* Footer design */
+
+footer{
+    width: 100%;
+    background: var(--bg-color);
+    padding: 40px 0 0 0;
+    border-top: 3px solid rgba(65, 63, 63, 0.644);
+    margin-top: 60px;
+}
+
+.footer-boxes{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+.footer-box{
+    width: 20%;
+    color: #333;
+    text-align: justify;
+    
+}
+
+.footer-box h3{
+    border-bottom: 1px solid rgba(66, 66, 66, 0.747);
+    padding-bottom: 10px;
+}
+
+/* Footer box Contact form */
+
+.footer-box ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.footer-box li{
+    padding: 10px 0;
+
+}
+
+.footer-box a{
+    text-decoration: none;
+    color: #444;
+}
+
+/* Footer logo */
+
+.footer-logo{
+    width: 100%;
+    padding: 5px 0 15px 0px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-logo a{
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-logo a:hover{
+    text-decoration: underline;
+    color: #222;
+}
+
+
+
+
